@@ -1,6 +1,6 @@
 from pyrogram import (
     Client,
-    Filters
+    filters
 )
 
 from ffmpegbot import (
