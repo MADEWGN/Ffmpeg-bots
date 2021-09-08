@@ -1,6 +1,6 @@
 from pyrogram import (
     Client,
-    Filters
+    filters
 )
 
 from ffmpegbot import (
@@ -17,7 +17,7 @@ import os
 import time
 
 
-@Client.on_message(Filters.command([EXEC_CMD_TRIGGER]) & Filters.chat(AUTH_USERS))
+@Client.on_message(filters.command([EXEC_CMD_TRIGGER]) & filters.chat(AUTH_USERS))
 async def execution_cmd_t(client, message):
     status_message = await message.reply_text(PROCESS_RUNNING, quote=True)
 
